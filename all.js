@@ -89,9 +89,9 @@ function getResultData(city, district) {
           hospitalPhone.classList.add("description", "hospitalPhone");
           hospitalPhoneText = document.createTextNode(data[i].Phone);
           const homeIcon = document.createElement("i");
-          homeIcon.classList.add("home", "icon", "red");
+          homeIcon.classList.add("home", "icon", "violet", "circular");
           const phoneIcon = document.createElement("i");
-          phoneIcon.classList.add("phone", "icon", "orange");
+          phoneIcon.classList.add("phone", "icon", "red", "circular");
           item.appendChild(content);
           brandTag.appendChild(brandTagLabel);
           flexBox.append(hospitalName, brandTag);
@@ -140,9 +140,9 @@ function getResultData(city, district) {
           hospitalPhone.classList.add("description", "hospitalPhone");
           hospitalPhoneText = document.createTextNode(data[i].Phone);
           const homeIcon = document.createElement("i");
-          homeIcon.classList.add("home", "red", "icon");
+          homeIcon.classList.add("home", "violet", "icon");
           const phoneIcon = document.createElement("i");
-          phoneIcon.classList.add("phone", "icon", "blue");
+          phoneIcon.classList.add("phone", "icon", "red", "circular");
           item.appendChild(content);
           brandTag.appendChild(brandTagLabel);
           flexBox.append(hospitalName, brandTag);
@@ -300,7 +300,24 @@ async function fecthdata() {
   addlocationInput();
   for (var i = 0; i < data.length; i++) {
     markers.addLayer(
-      L.marker([data[i].Lat, data[i].Long], { icon: greenIcon }).bindPopup("ji")
+      L.marker([data[i].Lat, data[i].Long], { icon: greenIcon }).bindPopup(
+        data[i].InfoWindowMessage
+        // `<h3>${data[i].HospitalName}</h3>
+        // <p class="ui header center aligned m-0 p-0">
+        //  <div class="content p-0">
+        //   <i class="circular inverted teal hospital outline icon"></i>
+        //   ${data[i].Address}
+        //  </div>
+        // </p>
+        // <p class="ui header center aligned m-0 p-0">
+        //  <div class="content p-0">
+        //   <i class="circular inverted orange phone  icon"></i>
+
+        //   ${data[i].Phone}
+        //  </div>
+        // </p>
+        // `
+      )
     );
   }
   map.addLayer(markers);

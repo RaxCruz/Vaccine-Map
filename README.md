@@ -14,5 +14,5 @@
 1. 加入RWD, 方便使用者使用手機使用
 1. 修復在Safari瀏覽器畫面顯示的問題
 
-## 立即體驗
-[點擊進入]()
+## 開始搜尋
+[點擊進入](https://raxcruz.github.io/Vaccine-Map/)

@@ -140,7 +140,7 @@ function getResultData(city, district) {
           hospitalPhone.classList.add("description", "hospitalPhone");
           hospitalPhoneText = document.createTextNode(data[i].Phone);
           const homeIcon = document.createElement("i");
-          homeIcon.classList.add("home", "violet", "icon");
+          homeIcon.classList.add("home", "violet", "circular", "icon");
           const phoneIcon = document.createElement("i");
           phoneIcon.classList.add("phone", "icon", "red", "circular");
           item.appendChild(content);

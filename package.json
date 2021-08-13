@@ -1,0 +1,22 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "有鑑於新型肺炎的病情導致台灣的口罩之亂，衛福部釋出口罩的API，因此拿來做練習。謝謝辛苦的工程師們、醫護人員以及所有為台灣醫療盡一份心力的朋友們，台灣與世界一起加油。",
+  "main": "all.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinshu1995/maskmap.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinshu1995/maskmap/issues"
+  },
+  "homepage": "https://github.com/kevinshu1995/maskmap#readme",
+  "dependencies": {
+    "leaflet.markercluster": "^1.5.0"
+  }
+}

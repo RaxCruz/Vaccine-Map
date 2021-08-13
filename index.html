@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>疫苗接種地圖</title>
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <link href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css"></link> 
+    <link href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css"></link> 
+    
+    <link rel="stylesheet" href="style.css" />
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-3 p-0">
+
+          <main class="side-bar-wrap">
+
+            <section class="side-bar-info">
+
+              <h1 class="ui text-center m-0 p-0 pt-2 pb-2">
+                <i class="circular inverted syringe yellow icon"></i>
+                <!-- <i class="circular inverted teal users icon"></i> -->
+               
+                <div class="content side-bar-title">
+                  疫苗接種地圖
+                </div>
+              
+              </h1>
+             
+              <h1 class="ui text-center m-0 p-0 currentDate">2021-8-13</h1>
+
+              <h4 class="ui header center aligned m-0 p-0 pt-1">
+               
+                <div class="content p-2">
+                  <i class="check circle  icon purple  m-0"></i>
+                  查詢指定地區接種醫院
+                </div>
+            
+                <div class="content p-2">
+                  <i class="check circle  icon blue m-0"></i>
+                  可只對縣市進行篩選
+                </div>
+                
+              </h4>
+              <h4 class="ui header right aligned m-0 p-0 pt-1 side-bar-subTitle">
+               <!-- <div class="content p-2">
+                <a class="ui blue image label">
+                 
+                  Veronika
+                  <div class="detail">Friend</div>
+                </a>
+               </div> -->
+                
+                <div class="content  p-2">
+                  <a class="ui teal image label">
+                   
+                    Rax
+                    <div class="detail swish">Cruz</div>
+                  </a>
+                  
+                </div>
+              </h4>
+             
+             
+
+            </section>
+            
+            <section class="ui card side-bar-search m-0 w-100">
+              <div class="content">
+                <i class="right floated like icon"></i>
+                <i class="right floated star icon"></i>
+                <div class="header">
+                  <i class="search icon"></i>
+                  搜尋地區
+                </div>
+                <div class="description">
+                  <div class="ui form">
+                    <div class="field ">
+                      <label>縣市</label>
+                      <select class="ui search selection dropdown locationInput py-2">
+                        <option value="請選擇縣市" >請選擇縣市</option>
+                      </select>
+                    </div>  
+                </div>
+                <div class="ui form">
+                  <div class="field">
+                    <label>地區</label>
+                    <select class="ui selection search dropdown districtInput py-2">
+                      <option value="請選擇地區">請選擇地區</option>
+                    
+                    </select>
+                  </div>  
+                </div>
+             
+              <div class="button-group pt-4">
+                
+                <button id="0"  value="AstraZeneca" class="ui  button">
+                  AZ
+                </button>
+                <button id="1" value="mod" class="ui button">
+                  莫德納
+                </button>
+                <button id="2" value="gau" class="ui button">
+                  高端
+                </button>
+                </div>
+              </div>
+
+            
+            </div>
+            </section>
+                
+       
+          
+
+
+
+            <section class="side-bar-result p-3">
+              <div class="ui large aligned selection list resultList">
+                <div class="item text-center">
+                  <h1>無查詢結果</h1>
+                </div>
+                  <!-- <div class="item">
+                    <div class="content">
+                      <a class="header hospitalName">Daniel Louise</a>
+                      <div class="description hospitalAddress"><i class="home icon red"></i>Last seen watching just now.</div>
+                      <div class="description hospitalPhone"><i class="phone icon blue"></i>Last seen watching <a><b>Arrested Development</b></a> just now.</div>
+                    </div>
+                    </div> -->
+
+              </div>
+
+            </section>
+
+          </main>
+
+
+        </div>  <!-- end of col-3 -->
+       
+
+
+
+
+        <div class="col-9 p-0">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+    
+   
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    
+     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <script src="all.js"></script>
+  </body>
+</html>

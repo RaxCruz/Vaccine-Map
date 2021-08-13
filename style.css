@@ -35,6 +35,7 @@ body {
   height: 25%;
   margin: 0;
   width: 100%;
+  overflow-y: scroll;
 }
 .side-bar-result {
   height: 54%;

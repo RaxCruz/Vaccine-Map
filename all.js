@@ -1,5 +1,6 @@
 var data = 0;
 var districtData = 0;
+
 buttonState = [false, false, false];
 buttonName = ["AstraZeneca", "mod", "gau"];
 cityId = {

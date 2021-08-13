@@ -78,7 +78,7 @@ function getResultData(city, district) {
           hospitalName.classList.add("header", "hospitalName", "w-75");
           hospitalName.textContent = data[i].HospitalName;
           const brandTag = document.createElement("div");
-          brandTag.classList.add("ui", "labels", "teal");
+          brandTag.classList.add("ui", "labels", "orange");
           const brandTagLabel = document.createElement("a");
           brandTagLabel.classList.add("ui", "label");
           brandTagLabel.textContent = "AZ疫苗";

@@ -175,8 +175,7 @@ function getResultData(city, district) {
   }
 }
 
-{
-  /* <div class="ui blue labels">
+/* <div class="ui blue labels">
   <a class="ui label">
     Fun <i class="icon close"></i>
   </a>
@@ -194,7 +193,6 @@ function getResultData(city, district) {
     Exciting
   </a>
 </div> */
-}
 
 /* <div class="item">
 <div class="content">

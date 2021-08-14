@@ -3,6 +3,16 @@ var districtData = 0;
 
 buttonState = [false, false, false];
 buttonName = ["AstraZeneca", "mod", "gau"];
+const date = new Date();
+const day = date.getDate();
+const month = date.getMonth() + 1;
+const year = date.getFullYear();
+const dayClass = document.querySelector(".day");
+dayClass.textContent = day;
+const monthClass = document.querySelector(".month");
+monthClass.textContent = month;
+const yearClass = document.querySelector(".year");
+yearClass.textContent = year;
 cityId = {
   臺北市: 0,
   基隆市: 1,

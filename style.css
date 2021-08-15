@@ -50,6 +50,31 @@ body {
   right: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .side-bar-title-wrap {
+    padding: 0;
+  }
+  .side-bar-info {
+    height: 15%;
+  }
+  .side-bar-search {
+    height: 30%;
+  }
+  .side-bar-title {
+    font-size: 80%;
+    padding: 0;
+  }
+  .currentDate {
+    font-size: 100%;
+  }
+  .side-bar-search-description {
+    width: 100%;
+  }
+  .locationInput {
+    width: 100%;
+  }
+}
+
 .marker-cluster-small {
   background-color: rgba(181, 226, 140, 0.6);
 }

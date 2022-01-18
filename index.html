@@ -4,15 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
+    <link rel="icon" href="favicon.ico" type="icon" />
     <title>疫苗接種地圖</title>
-
-
-
-
+    <link 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
-
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -34,10 +29,14 @@
   </head>
 
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-5 col-md-3 p-0">
-
+    <header class="">
+      <nav class="navbar  navbar-light   fixed-top">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse.show m-5" id="navbarTogglerDemo03">
           <main class="side-bar-wrap">
 
             <section class="side-bar-info ">
@@ -164,19 +163,18 @@
             </section>
 
           </main>
-
-
-        </div>  <!-- end  col-3 -->
+        </div>
+      </nav>
+  </header>
+    <div class="container-fluid">
+      <div class="row">
        
-
-
-
-
-        <div class="col-md-9 col-7 p-0">
+        <div class="col-12  p-0">
+         
+          
           <div id="map"></div>
         </div>
       </div>
-    </div>
     
    
 

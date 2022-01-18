@@ -8,7 +8,12 @@ body {
   background-color: gray;
   margin: 0;
 }
-
+nav {
+  background: rgba(0, 0, 0, 0.13);
+}
+.navbar-toggler {
+  background: rgb(255, 103, 129);
+}
 #map {
   width: 100%;
   height: 100vh;
@@ -20,7 +25,6 @@ body {
 }
 
 .side-bar-info {
-  height: 20%;
   background: #ff7473;
   position: relative;
 }
@@ -32,13 +36,13 @@ body {
 }
 
 .side-bar-search {
-  height: 25%;
   margin: 0;
   width: 100%;
   overflow-y: scroll;
 }
 .side-bar-result {
-  height: 54%;
+  background: white;
+  height: 34%;
 }
 .resultList {
   height: 100%;
@@ -48,31 +52,6 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-}
-
-@media screen and (max-width: 768px) {
-  .side-bar-title-wrap {
-    padding: 0;
-  }
-  .side-bar-info {
-    height: 15%;
-  }
-  .side-bar-search {
-    height: 30%;
-  }
-  .side-bar-title {
-    font-size: 80%;
-    padding: 0;
-  }
-  .currentDate {
-    font-size: 100%;
-  }
-  .side-bar-search-description {
-    width: 100%;
-  }
-  .locationInput {
-    width: 100%;
-  }
 }
 
 .marker-cluster-small {
